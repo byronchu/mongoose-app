@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action="/" method="post">
+      <input name="ingredient[name]">
+      <input type="submit">
+    </form>
+
+    <ul>
+      <% ingredients.forEach((ingredient) => { %>
+        <li><%= ingredient.name %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
